@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saturday With Me</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script>
+    function sayYes() {
+      document.getElementById('page-invite').style.display = 'none';
+      document.getElementById('page-poem').style.display = 'flex';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background: #0f0f0f; color: #fff; overflow: hidden; height: 100vh; }
+
+    .page {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .page.active { display: flex; }
+
+    .card {
+      background: rgba(20,20,20,0.65);
+      backdrop-filter: blur(14px);
+      border-radius: 22px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto; /* scroll inside card if needed */
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .subtitle { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #b5b5b5; }
+    h1 { font-size: 28px; font-weight: 600; margin-bottom: 10px; }
+    p { font-size: 16px; color: #e0e0e0; }
+
+    .plan { background: rgba(255,255,255,0.06); border-radius: 14px; padding: 14px; text-align: center; }
+    .plan-item { font-size: 15px; margin: 8px 0; }
+
+    .cta { display: inline-block; padding: 12px 28px; border-radius: 30px; background: #fff; color: #0f0f0f; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.3s ease; border: none; }
+    .cta:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 10px 20px rgba(255,255,255,0.15); }
+
+    .poem { font-size: 16px; text-align: center; white-space: pre-line; }
+
+    .poem-images { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .poem-images img { width: 48%; height: auto; border-radius: 16px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+
+    .footer { font-size: 13px; color: #9a9a9a; margin-top: 10px; }
+
+    /* Mobile adjustments */
+    @media(max-width: 500px) {
+      .poem-images img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div id="page-invite" class="page active">
+    <div class="card">
+      <div class="subtitle">This Saturday</div>
+      <h1>Can I steal you for a date?</h1>
+      <p>Something simple, beautiful, and just for us. No distractions. Just time together.</p>
+      <div class="plan">
+        <div class="plan-item">🍽️ Lunch at: <strong>Memories Gastrobar - 14:00</strong></div>
+        <div class="plan-item">🎬 Movie night at <strong>Teatro Gungu - 18:00</strong></div>
+        <div class="plan-item">✨ Just us, enjoying each other's company</div>
+      </div>
+      <button class="cta" onclick="sayYes()">Say yes</button>
+      <div class="footer">From me, always. Teu ratinho</div>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div id="page-poem" class="page">
+    <div class="card">
+      <div class="subtitle">For You</div>
+      <h1>My favorite place is you</h1>
+      <div class="poem">
+        In the quiet of your eyes,
+        I find the journey I have been seeking.
+        Every heartbeat whispers of destiny,
+        And every touch traces a map to your soul.
+        The world may try to pull us apart,
+        But love is the bridge that bends without breaking.
+        Even in silence, I hear your laughter,
+        And in your absence, I feel your presence.
+        I know we’ve stumbled,
+        I know my heart sometimes trembles with fear,
+        Yet with every beat, it calls only for you.
+        You are the light that chases my darkness,
+        The patience that teaches me to trust again.
+        Even when the world feels heavy,
+        Even when my mind drifts to what-ifs,
+        I cannot imagine a path without you.
+        You are not just the love of my life—
+        You are my life itself.
+        So I vow, through every storm, every tear, every silence,
+        To stay by your side,
+        To cherish you until the last star fades,
+        Because no one else could ever matter more than you.
+      </div>
+      <div class="poem-images">
+        <img src="/images/5BF300B9-97D8-404D-AB94-55FFE09CA448_1_105_c.jpeg" alt="Us together" />
+        <img src="/images/C5E0EC03-7336-4EF9-8032-4261A46D4FF5_1_105_c.jpeg" alt="Our moment" />
+      </div>
+      <div class="footer">Saturday is ours ❤️</div>
+    </div>
+  </div>
+
+</body>
+</html>
